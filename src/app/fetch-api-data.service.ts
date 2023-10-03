@@ -86,9 +86,9 @@ export class UserRegistrationService {
     const user = JSON.parse(localStorage.getItem('user') || '{}');
     return user;
     // This endpoint does not exist but this is how it would look
-    // const username = localStorage.getItem('username');
+    // const username = localStorage.getItem('user');
     // const token = localStorage.getItem('token');
-    // return this.http.get(apiUrl + 'users/' + username, {
+    // return this.http.get(apiUrl + 'users/' + user, {
     //   headers: new HttpHeaders(
     //     {
     //       Authorization: 'Bearer ' + token,
