@@ -1,11 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
-
 // this import is used to close the dialog on success
 import { MatDialogRef } from '@angular/material/dialog';
-
 // this import brings in the api clals we creaed in 6.2
 import { UserRegistrationService } from '../fetch-api-data.service';
-
 // this import is used to display notifications back to the user
 import { MatSnackBar } from '@angular/material/snack-bar';
 @Component({
@@ -34,6 +31,8 @@ export class UserRegistrationFormComponent implements OnInit {
         this.snackBar.open('User registererd successfully!', 'OK', {
           duration: 2000,
         });
+        localStorage.setItem('user', JSON.stringify(result.user));
+        localStorage.setItem('token', result.token);
       },
       (response) => {
         this.snackBar.open(response, 'OK', {
