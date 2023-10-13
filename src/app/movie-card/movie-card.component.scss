@@ -11,8 +11,16 @@
 
 .movie-header {
   min-height: 80px;
+  color: #7b43b4;
+}
+
+.button:hover {
+  background-color: #7b43b4;
+  color: #fff;
 }
 
 .fave-button {
   margin-left: auto;
+  color: #7b43b4;
+  border: 2em;
 }
